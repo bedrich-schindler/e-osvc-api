@@ -1,0 +1,36 @@
+App\Entity\User:
+  type: entity
+  table: app_user
+
+  id:
+    id:
+      type: integer
+      generator: { strategy: IDENTITY }
+
+  fields:
+    firstName:
+      type: string
+      length: 32
+
+    lastName:
+      type: string
+      length: 32
+
+    email:
+      type: string
+      length: 64
+      unique: true
+
+    username:
+      type: string
+      length: 64
+      unique: true
+
+    password:
+      type: text
+
+    isActive:
+      type: boolean
+
+    roles:
+      type: json
