@@ -41,7 +41,7 @@ security:
           methods: [POST]
           roles:
             - IS_AUTHENTICATED_ANONYMOUSLY
-        - path: ^/users
+        - path: ^/
           roles:
               - !php/const App\Entity\User::ROLE_USER
 

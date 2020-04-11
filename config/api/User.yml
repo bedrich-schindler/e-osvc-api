@@ -29,3 +29,8 @@ App\Entity\User:
           - user_in
     delete:
       method: DELETE
+  properties:
+    clients:
+      subresource:
+        resourceClass: 'App\Entity\Client'
+        collection: true

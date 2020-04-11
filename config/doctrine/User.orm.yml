@@ -34,3 +34,8 @@ App\Entity\User:
 
     roles:
       type: json
+
+  oneToMany:
+    clients:
+      targetEntity: App\Entity\Client
+      mappedBy: owner

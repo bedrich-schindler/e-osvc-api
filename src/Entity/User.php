@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 class User implements UserInterface
@@ -55,6 +57,11 @@ class User implements UserInterface
      */
     private array $roles = [];
 
+    /**
+     * @var Collection Clients
+     */
+    private Collection $clients;
+
     public function __construct()
     {
         $this->firstName = '';
@@ -65,6 +72,7 @@ class User implements UserInterface
         $this->plainPassword = null;
         $this->isActive = false;
         $this->roles = [self::ROLE_USER];
+        $this->clients = new ArrayCollection();
     }
 
     /**
@@ -82,7 +90,7 @@ class User implements UserInterface
     public function setId(?int $id): User
     {
         $this->id = $id;
-        
+
         return $this;
     }
 
@@ -255,5 +263,24 @@ class User implements UserInterface
     public function eraseCredentials(): void
     {
         $this->plainPassword = null;
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getClients(): Collection
+    {
+        return $this->clients;
+    }
+
+    /**
+     * @param Collection $clients
+     * @return User
+     */
+    public function setClients(Collection $clients): User
+    {
+        $this->clients = $clients;
+
+        return $this;
     }
 }

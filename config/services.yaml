@@ -34,3 +34,7 @@ services:
         tags:
             - { name: doctrine.event_subscriber }
 
+
+    App\Subscriber\SetOwnerSubscriber:
+      class: App\Subscriber\SetOwnerSubscriber
+      autowire: true

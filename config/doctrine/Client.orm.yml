@@ -1,0 +1,22 @@
+App\Entity\Client:
+  type: entity
+  table: client
+
+  id:
+    id:
+      type: integer
+      generator: { strategy: IDENTITY }
+
+  fields:
+    name:
+      type: string
+      length: 64
+
+  manyToOne:
+    owner:
+      targetEntity: App\Entity\User
+      inversedBy: clients
+      joinColumn:
+        name: owner_id
+        referencedColumnName: id
+        nullable: false
