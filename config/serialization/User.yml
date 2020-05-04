@@ -2,7 +2,8 @@ App\Entity\User:
   attributes:
     id:
       groups:
-        - client_out_list
+        - client_out_detail
+        - project_out_detail
         - user_out_list
         - user_out_detail
     firstName:

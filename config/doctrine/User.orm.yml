@@ -39,3 +39,7 @@ App\Entity\User:
     clients:
       targetEntity: App\Entity\Client
       mappedBy: owner
+
+    projects:
+      targetEntity: App\Entity\Project
+      mappedBy: owner

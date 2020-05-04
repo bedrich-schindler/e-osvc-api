@@ -1,0 +1,12 @@
+App\Entity\Project:
+  properties:
+    name:
+      - NotBlank: ~
+      - Length:
+          max: 64
+
+    client:
+      - NotBlank: ~
+
+    owner:
+      - NotBlank: ~

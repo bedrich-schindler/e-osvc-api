@@ -1,18 +1,19 @@
-App\Entity\Client:
+App\Entity\Project:
   attributes:
     id:
       groups:
-        - client_out_list
-        - client_out_detail
         - project_out_list
         - project_out_detail
     name:
       groups:
-        - client_out_list
-        - client_out_detail
-        - client_in
         - project_out_list
         - project_out_detail
+        - project_in
+    client:
+      groups:
+        - project_out_list
+        - project_out_detail
+        - project_in
     owner:
       groups:
-        - client_out_detail
+        - project_out_detail

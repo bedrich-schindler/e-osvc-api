@@ -34,3 +34,7 @@ App\Entity\User:
       subresource:
         resourceClass: 'App\Entity\Client'
         collection: true
+    projects:
+      subresource:
+        resourceClass: 'App\Entity\Project'
+        collection: true

@@ -2,6 +2,9 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+
 class Client implements OwnedByUserInterface
 {
     /**
@@ -19,9 +22,15 @@ class Client implements OwnedByUserInterface
      */
     private ?User $owner = null;
 
+    /**
+     * @var Collection
+     */
+    private Collection $projects;
+
     public function __construct()
     {
         $this->name = '';
+        $this->projects = new ArrayCollection();
     }
 
     /**
@@ -80,4 +89,23 @@ class Client implements OwnedByUserInterface
 
       return $this;
   }
+
+    /**
+     * @return Collection
+     */
+    public function getProjects(): Collection
+    {
+        return $this->projects;
+    }
+
+    /**
+     * @param Collection $projects
+     * @return Client
+     */
+    public function setProjects(Collection $projects): Client
+    {
+        $this->projects = $projects;
+
+        return $this;
+    }
 }

@@ -1,6 +1,6 @@
-App\Entity\Client:
+App\Entity\Project:
   type: entity
-  table: client
+  table: project
 
   id:
     id:
@@ -13,15 +13,17 @@ App\Entity\Client:
       length: 64
 
   manyToOne:
+    client:
+      targetEntity: App\Entity\Client
+      inversedBy: projects
+      joinColumn:
+        name: client_id
+        referencedColumnName: id
+        nullable: false
     owner:
       targetEntity: App\Entity\User
-      inversedBy: clients
+      inversedBy: projects
       joinColumn:
         name: owner_id
         referencedColumnName: id
         nullable: false
-
-  oneToMany:
-    projects:
-      targetEntity: App\Entity\Project
-      mappedBy: client
