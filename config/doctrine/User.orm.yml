@@ -16,6 +16,28 @@ App\Entity\User:
       type: string
       length: 32
 
+    street:
+      type: string
+      length: 128
+
+    city:
+      type: string
+      length: 128
+
+    postalCode:
+      type: integer
+
+    cidNumber:
+      type: integer
+
+    taxNumber:
+      type: integer
+      nullable: true
+
+    bankAccount:
+      type: string
+      length: 64
+
     email:
       type: string
       length: 64

@@ -14,6 +14,36 @@ App\Entity\User:
       - Length:
           max: 64
 
+    street:
+      - NotBlank: ~
+      - Length:
+          max: 128
+
+    city:
+      - NotBlank: ~
+      - Length:
+          max: 128
+
+    postalCode:
+      - NotBlank: ~
+      - Range:
+          min: 1
+          max: 99999
+
+    cidNumber:
+      - NotBlank: ~
+      - Range:
+          min: 0
+
+    taxNumber:
+      - Range:
+          min: 0
+
+    bankAccount:
+      - NotBlank: ~
+      - Length:
+          max: 64
+
     email:
       - NotBlank: ~
       - Length:

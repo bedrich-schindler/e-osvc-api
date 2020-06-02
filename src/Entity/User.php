@@ -28,6 +28,36 @@ class User implements UserInterface
     private string $lastName;
 
     /**
+     * @var string Street and street number
+     */
+    private string $street;
+
+    /**
+     * @var string City
+     */
+    private string $city;
+
+    /**
+     * @var int Postal code
+     */
+    private int $postalCode;
+
+    /**
+     * @var int Company identification number
+     */
+    private int $cidNumber;
+
+    /**
+     * @var int|null Tax identification number
+     */
+    private ?int $taxNumber;
+
+    /**
+     * @var string Bank account
+     */
+    private string $bankAccount;
+
+    /**
      * @var string E-mail
      */
     private string $email;
@@ -76,6 +106,11 @@ class User implements UserInterface
     {
         $this->firstName = '';
         $this->lastName = '';
+        $this->street = '';
+        $this->city = '';
+        $this->postalCode = 0;
+        $this->cidNumber = 0;
+        $this->bankAccount = '';
         $this->email = '';
         $this->username = '';
         $this->password = '';
@@ -140,6 +175,120 @@ class User implements UserInterface
     public function setLastName(string $lastName): User
     {
         $this->lastName = $lastName;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStreet(): string
+    {
+        return $this->street;
+    }
+
+    /**
+     * @param string $street
+     * @return User
+     */
+    public function setStreet(string $street): User
+    {
+        $this->street = $street;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCity(): string
+    {
+        return $this->city;
+    }
+
+    /**
+     * @param string $city
+     * @return User
+     */
+    public function setCity(string $city): User
+    {
+        $this->city = $city;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getPostalCode(): int
+    {
+        return $this->postalCode;
+    }
+
+    /**
+     * @param int $postalCode
+     * @return User
+     */
+    public function setPostalCode(int $postalCode): User
+    {
+        $this->postalCode = $postalCode;
+
+        return $this;
+    }
+
+    /**
+     * @return int
+     */
+    public function getCidNumber(): int
+    {
+        return $this->cidNumber;
+    }
+
+    /**
+     * @param int $cidNumber
+     * @return User
+     */
+    public function setCidNumber(int $cidNumber): User
+    {
+        $this->cidNumber = $cidNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getTaxNumber(): ?int
+    {
+        return $this->taxNumber;
+    }
+
+    /**
+     * @param int|null $taxNumber
+     * @return User
+     */
+    public function setTaxNumber(?int $taxNumber): User
+    {
+        $this->taxNumber = $taxNumber;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getBankAccount(): string
+    {
+        return $this->bankAccount;
+    }
+
+    /**
+     * @param string $bankAccount
+     * @return User
+     */
+    public function setBankAccount(string $bankAccount): User
+    {
+        $this->bankAccount = $bankAccount;
 
         return $this;
     }

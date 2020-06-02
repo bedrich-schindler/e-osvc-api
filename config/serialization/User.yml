@@ -18,6 +18,30 @@ App\Entity\User:
         - user_out_list
         - user_out_detail
         - user_in
+    street:
+      groups:
+        - user_out_detail
+        - user_in
+    city:
+      groups:
+        - user_out_detail
+        - user_in
+    postalCode:
+      groups:
+        - user_out_detail
+        - user_in
+    cidNumber:
+      groups:
+        - user_out_detail
+        - user_in
+    taxNumber:
+      groups:
+        - user_out_detail
+        - user_in
+    bankAccount:
+      groups:
+        - user_out_detail
+        - user_in
     username:
       groups:
         - user_out_list
