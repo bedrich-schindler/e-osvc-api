@@ -15,6 +15,41 @@ App\Entity\Client:
         - client_in
         - project_out_list
         - project_out_detail
+    street:
+      groups:
+        - client_out_list
+        - client_out_detail
+        - client_in
+    city:
+      groups:
+        - client_out_list
+        - client_out_detail
+        - client_in
+    postalCode:
+      groups:
+        - client_out_list
+        - client_out_detail
+        - client_in
+    cidNumber:
+      groups:
+        - client_out_list
+        - client_out_detail
+        - client_in
+    taxNumber:
+      groups:
+        - client_out_list
+        - client_out_detail
+        - client_in
+    contactEmail:
+      groups:
+        - client_out_list
+        - client_out_detail
+        - client_in
+    contactPhoneNumber:
+      groups:
+        - client_out_list
+        - client_out_detail
+        - client_in
     owner:
       groups:
         - client_out_detail
