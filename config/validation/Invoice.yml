@@ -1,0 +1,29 @@
+App\Entity\Invoice:
+  properties:
+    invoiceIdentifier:
+      - NotBlank: ~
+      - Length:
+          max: 32
+
+    invoiceDate:
+      - NotBlank: ~
+
+    invoiceDueDate:
+      - NotBlank: ~
+
+    clientInfo:
+      - NotBlank: ~
+      - Valid: ~
+
+    projectInfo:
+      - NotBlank: ~
+      - Valid: ~
+
+    invoiceItems:
+      - NotBlank: ~
+      - Count:
+          min: 1
+      - Valid: ~
+
+    owner:
+      - NotBlank: ~

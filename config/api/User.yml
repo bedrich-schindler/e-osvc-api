@@ -38,3 +38,7 @@ App\Entity\User:
       subresource:
         resourceClass: 'App\Entity\Project'
         collection: true
+    invoices:
+      subresource:
+        resourceClass: 'App\Entity\Invoice'
+        collection: true

@@ -1,0 +1,27 @@
+App\Entity\InvoiceProjectInfo:
+  type: entity
+  table: invoice_project_info
+
+  id:
+    id:
+      type: integer
+      generator: { strategy: IDENTITY }
+
+  fields:
+    name:
+      type: string
+      length: 64
+
+  oneToOne:
+    invoice:
+      targetEntity: App\Entity\Invoice
+      mappedBy: projectInfo
+
+  manyToOne:
+    original:
+      targetEntity: App\Entity\Project
+      joinColumn:
+        name: original_id
+        referencedColumnName: id
+        nullable: true
+

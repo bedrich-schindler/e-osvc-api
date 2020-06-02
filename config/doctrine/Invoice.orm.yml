@@ -1,0 +1,68 @@
+App\Entity\Invoice:
+  type: entity
+  table: invoice
+
+  id:
+    id:
+      type: integer
+      generator: { strategy: IDENTITY }
+
+  fields:
+    invoiceIdentifier:
+      type: string
+      length: 32
+
+    invoiceDate:
+      type: datetime_immutable
+
+    invoiceDueDate:
+      type: datetime_immutable
+
+    invoicePaymentDate:
+      type: datetime_immutable
+      nullable: true
+
+  oneToOne:
+    clientInfo:
+      targetEntity: App\Entity\InvoiceClientInfo
+      inversedBy: invoice
+      joinColumn:
+        name: invoice_client_info_id
+        referencedColumnName: id
+        nullable: false
+        onDelete: CASCADE
+      cascade:
+        - persist
+        - remove
+      orphanRemoval: true
+
+    projectInfo:
+      targetEntity: App\Entity\InvoiceProjectInfo
+      inversedBy: invoice
+      joinColumn:
+        name: invoice_project_info_id
+        referencedColumnName: id
+        nullable: false
+        onDelete: CASCADE
+      cascade:
+        - persist
+        - remove
+      orphanRemoval: true
+
+  oneToMany:
+    invoiceItems:
+      targetEntity: App\Entity\InvoiceItem
+      mappedBy: invoice
+      cascade:
+        - persist
+        - remove
+      orphanRemoval: true
+
+  manyToOne:
+    owner:
+      targetEntity: App\Entity\User
+      inversedBy: invoices
+      joinColumn:
+        name: owner_id
+        referencedColumnName: id
+        nullable: false

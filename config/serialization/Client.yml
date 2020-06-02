@@ -4,6 +4,8 @@ App\Entity\Client:
       groups:
         - client_out_list
         - client_out_detail
+        - invoice_out_list
+        - invoice_out_detail
         - project_out_list
         - project_out_detail
     name:

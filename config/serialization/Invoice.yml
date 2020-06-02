@@ -1,0 +1,44 @@
+App\Entity\Invoice:
+  attributes:
+    id:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+    invoiceIdentifier:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
+    invoiceDate:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
+    invoiceDueDate:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
+    invoicePaymentDate:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
+    clientInfo:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
+    projectInfo:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
+    invoiceItems:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
+    owner:
+      groups:
+        - invoice_out_detail

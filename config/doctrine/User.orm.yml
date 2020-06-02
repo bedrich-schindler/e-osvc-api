@@ -43,3 +43,7 @@ App\Entity\User:
     projects:
       targetEntity: App\Entity\Project
       mappedBy: owner
+
+    invoices:
+      targetEntity: App\Entity\Invoice
+      mappedBy: owner

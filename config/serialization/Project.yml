@@ -2,6 +2,8 @@ App\Entity\Project:
   attributes:
     id:
       groups:
+        - invoice_out_list
+        - invoice_out_detail
         - project_out_list
         - project_out_detail
     name:

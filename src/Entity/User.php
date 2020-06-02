@@ -67,6 +67,11 @@ class User implements UserInterface
      */
     private Collection $projects;
 
+    /**
+     * @var Collection Invoices
+     */
+    private Collection $invoices;
+
     public function __construct()
     {
         $this->firstName = '';
@@ -79,6 +84,7 @@ class User implements UserInterface
         $this->roles = [self::ROLE_USER];
         $this->clients = new ArrayCollection();
         $this->projects = new ArrayCollection();
+        $this->invoices = new ArrayCollection();
     }
 
     /**
@@ -305,6 +311,25 @@ class User implements UserInterface
     public function setProjects(Collection $projects): User
     {
         $this->projects = $projects;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getInvoices(): Collection
+    {
+        return $this->invoices;
+    }
+
+    /**
+     * @param Collection $invoices
+     * @return User
+     */
+    public function setInvoices(Collection $invoices): User
+    {
+        $this->invoices = $invoices;
 
         return $this;
     }

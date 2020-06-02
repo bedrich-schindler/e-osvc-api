@@ -1,0 +1,26 @@
+App\Entity\InvoiceItem:
+  attributes:
+    id:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+    quantity:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
+    pricePerQuantityUnit:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
+    quantityUnit:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
+    note:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in

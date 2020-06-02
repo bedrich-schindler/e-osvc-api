@@ -1,0 +1,9 @@
+App\Entity\InvoiceProjectInfo:
+  properties:
+    name:
+      - NotBlank: ~
+      - Length:
+          max: 64
+
+    original:
+      - NotBlank: ~

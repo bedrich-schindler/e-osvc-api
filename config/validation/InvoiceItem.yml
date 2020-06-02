@@ -1,0 +1,18 @@
+App\Entity\InvoiceItem:
+  properties:
+    quantity:
+      - NotBlank: ~
+      - GreaterThan:
+          value: 0
+
+    pricePerQuantityUnit:
+      - NotBlank: ~
+      - GreaterThan:
+          value: 0
+
+    quantityUnit:
+      - Length:
+          max: 8
+
+    note:
+      - NotBlank: ~

@@ -1,0 +1,16 @@
+App\Entity\InvoiceClientInfo:
+  attributes:
+    id:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+    name:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
+    original:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
