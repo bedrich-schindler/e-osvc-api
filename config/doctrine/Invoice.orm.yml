@@ -22,7 +22,23 @@ App\Entity\Invoice:
       type: datetime_immutable
       nullable: true
 
+    paymentVariableSymbol:
+      type: integer
+
   oneToOne:
+    userInfo:
+      targetEntity: App\Entity\InvoiceUserInfo
+      inversedBy: invoice
+      joinColumn:
+        name: invoice_user_info_id
+        referencedColumnName: id
+        nullable: false
+        onDelete: CASCADE
+      cascade:
+        - persist
+        - remove
+      orphanRemoval: true
+
     clientInfo:
       targetEntity: App\Entity\InvoiceClientInfo
       inversedBy: invoice

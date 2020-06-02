@@ -34,9 +34,19 @@ class Invoice implements OwnedByUserInterface
     private ?DateTimeImmutable $invoicePaymentDate = null;
 
     /**
+     * @var int Variable symbol of the payment
+     */
+    private int $paymentVariableSymbol;
+
+    /**
      * @var Collection Invoice items
      */
     private Collection $invoiceItems;
+
+    /**
+     * @var InvoiceUserInfo|null User info
+     */
+    private ?InvoiceUserInfo $userInfo = null;
 
     /**
      * @var InvoiceClientInfo|null Client info
@@ -60,6 +70,7 @@ class Invoice implements OwnedByUserInterface
         $this->invoiceIdentifier = '';
         $this->invoiceDate = new DateTimeImmutable();
         $this->invoiceDueDate = new DateTimeImmutable();
+        $this->paymentVariableSymbol = 0;
         $this->invoiceItems = new ArrayCollection();
     }
 
@@ -159,6 +170,25 @@ class Invoice implements OwnedByUserInterface
     }
 
     /**
+     * @return int
+     */
+    public function getPaymentVariableSymbol(): int
+    {
+        return $this->paymentVariableSymbol;
+    }
+
+    /**
+     * @param int $paymentVariableSymbol
+     * @return Invoice
+     */
+    public function setPaymentVariableSymbol(int $paymentVariableSymbol): Invoice
+    {
+        $this->paymentVariableSymbol = $paymentVariableSymbol;
+
+        return $this;
+    }
+
+    /**
      * @return InvoiceItem[]
      */
     public function getInvoiceItems(): array
@@ -177,6 +207,25 @@ class Invoice implements OwnedByUserInterface
         }
 
         $this->invoiceItems = new ArrayCollection($invoiceItems);
+
+        return $this;
+    }
+
+    /**
+     * @return InvoiceUserInfo|null
+     */
+    public function getUserInfo(): ?InvoiceUserInfo
+    {
+        return $this->userInfo;
+    }
+
+    /**
+     * @param InvoiceUserInfo|null $userInfo
+     * @return Invoice
+     */
+    public function setUserInfo(?InvoiceUserInfo $userInfo): Invoice
+    {
+        $this->userInfo = $userInfo;
 
         return $this;
     }

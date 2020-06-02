@@ -1,9 +1,14 @@
-App\Entity\InvoiceClientInfo:
+App\Entity\InvoiceUserInfo:
   properties:
-    name:
+    firstName:
       - NotBlank: ~
       - Length:
-          max: 64
+          max: 32
+
+    lastName:
+      - NotBlank: ~
+      - Length:
+          max: 32
 
     street:
       - NotBlank: ~
@@ -22,6 +27,7 @@ App\Entity\InvoiceClientInfo:
           max: 99999
 
     cidNumber:
+      - NotBlank: ~
       - Range:
           min: 0
 
@@ -29,5 +35,7 @@ App\Entity\InvoiceClientInfo:
       - Range:
           min: 0
 
-    original:
+    bankAccount:
       - NotBlank: ~
+      - Length:
+          max: 64

@@ -1,10 +1,15 @@
-App\Entity\InvoiceClientInfo:
+App\Entity\InvoiceUserInfo:
   attributes:
     id:
       groups:
         - invoice_out_list
         - invoice_out_detail
-    name:
+    firstName:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
+    lastName:
       groups:
         - invoice_out_list
         - invoice_out_detail
@@ -34,7 +39,7 @@ App\Entity\InvoiceClientInfo:
         - invoice_out_list
         - invoice_out_detail
         - invoice_in
-    original:
+    bankAccount:
       groups:
         - invoice_out_list
         - invoice_out_detail

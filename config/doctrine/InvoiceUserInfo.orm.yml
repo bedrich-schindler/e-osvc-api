@@ -1,6 +1,6 @@
-App\Entity\InvoiceClientInfo:
+App\Entity\InvoiceUserInfo:
   type: entity
-  table: invoice_client_info
+  table: invoice_user_info
 
   id:
     id:
@@ -8,9 +8,13 @@ App\Entity\InvoiceClientInfo:
       generator: { strategy: IDENTITY }
 
   fields:
-    name:
+    firstName:
       type: string
-      length: 64
+      length: 32
+
+    lastName:
+      type: string
+      length: 32
 
     street:
       type: string
@@ -25,21 +29,16 @@ App\Entity\InvoiceClientInfo:
 
     cidNumber:
       type: integer
-      nullable: true
 
     taxNumber:
       type: integer
       nullable: true
 
+    bankAccount:
+      type: string
+      length: 64
+
   oneToOne:
     invoice:
       targetEntity: App\Entity\Invoice
-      mappedBy: clientInfo
-
-  manyToOne:
-    original:
-      targetEntity: App\Entity\Client
-      joinColumn:
-        name: original_id
-        referencedColumnName: id
-        nullable: true
+      mappedBy: userInfo

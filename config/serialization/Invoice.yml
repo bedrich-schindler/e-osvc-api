@@ -24,6 +24,16 @@ App\Entity\Invoice:
         - invoice_out_list
         - invoice_out_detail
         - invoice_in
+    paymentVariableSymbol:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
+    userInfo:
+      groups:
+        - invoice_out_list
+        - invoice_out_detail
+        - invoice_in
     clientInfo:
       groups:
         - invoice_out_list
