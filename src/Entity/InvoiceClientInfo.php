@@ -7,7 +7,7 @@ class InvoiceClientInfo
     /**
      * @var integer|null Id
      */
-    private ?int $id;
+    private ?int $id = null;
 
     /**
      * @var string Name
@@ -32,12 +32,12 @@ class InvoiceClientInfo
     /**
      * @var int|null Company identification number
      */
-    private ?int $cidNumber;
+    private ?int $cidNumber = null;
 
     /**
      * @var int|null Tax identification number
      */
-    private ?int $taxNumber;
+    private ?int $taxNumber = null;
 
     /**
      * @var Invoice|null Invoice

@@ -15,7 +15,7 @@ class User implements UserInterface
     /**
      * @var integer|null Id
      */
-    private ?int $id;
+    private ?int $id = null;
 
     /**
      * @var string First name
@@ -50,7 +50,7 @@ class User implements UserInterface
     /**
      * @var int|null Tax identification number
      */
-    private ?int $taxNumber;
+    private ?int $taxNumber = null;
 
     /**
      * @var string Bank account
@@ -75,7 +75,7 @@ class User implements UserInterface
     /**
      * @var string|null Plain password
      */
-    private ?string $plainPassword;
+    private ?string $plainPassword = null;
 
     /**
      * @var bool Is user account active

@@ -11,7 +11,7 @@ class Invoice implements OwnedByUserInterface
     /**
      * @var integer|null Id
      */
-    private ?int $id;
+    private ?int $id = null;
 
     /**
      * @var string Invoice identifier

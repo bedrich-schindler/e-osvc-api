@@ -7,7 +7,7 @@ class InvoiceProjectInfo
     /**
      * @var integer|null Id
      */
-    private ?int $id;
+    private ?int $id = null;
 
     /**
      * @var string Name

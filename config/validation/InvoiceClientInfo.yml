@@ -22,12 +22,12 @@ App\Entity\InvoiceClientInfo:
           max: 99999
 
     cidNumber:
-      - Range:
-          min: 0
+      - GreaterThan:
+          value: 0
 
     taxNumber:
-      - Range:
-          min: 0
+      - GreaterThan:
+          value: 0
 
     original:
       - NotBlank: ~

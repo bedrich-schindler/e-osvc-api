@@ -7,7 +7,7 @@ class InvoiceUserInfo
     /**
      * @var integer|null Id
      */
-    private ?int $id;
+    private ?int $id = null;
 
     /**
      * @var string First name
@@ -42,7 +42,7 @@ class InvoiceUserInfo
     /**
      * @var int|null Tax identification number
      */
-    private ?int $taxNumber;
+    private ?int $taxNumber = null;
 
     /**
      * @var string Bank account

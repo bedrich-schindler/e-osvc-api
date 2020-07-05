@@ -7,7 +7,7 @@ class InvoiceItem
     /**
      * @var integer|null Id
      */
-    private ?int $id;
+    private ?int $id = null;
 
     /**
      * @var int Quantity
@@ -99,18 +99,18 @@ class InvoiceItem
     }
 
     /**
-     * @return string
+     * @return string|null
      */
-    public function getQuantityUnit(): string
+    public function getQuantityUnit(): ?string
     {
         return $this->quantityUnit;
     }
 
     /**
-     * @param string $quantityUnit
+     * @param string|null $quantityUnit
      * @return InvoiceItem
      */
-    public function setQuantityUnit(string $quantityUnit): InvoiceItem
+    public function setQuantityUnit(?string $quantityUnit): InvoiceItem
     {
         $this->quantityUnit = $quantityUnit;
 

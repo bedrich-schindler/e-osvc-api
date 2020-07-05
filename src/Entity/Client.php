@@ -10,7 +10,7 @@ class Client implements OwnedByUserInterface
     /**
      * @var integer|null Id
      */
-    private ?int $id;
+    private ?int $id = null;
 
     /**
      * @var string Name
@@ -35,22 +35,22 @@ class Client implements OwnedByUserInterface
     /**
      * @var int|null Company identification number
      */
-    private ?int $cidNumber;
+    private ?int $cidNumber = null;
 
     /**
      * @var int|null Tax identification number
      */
-    private ?int $taxNumber;
+    private ?int $taxNumber = null;
 
     /**
      * @var string|null Contact e-mail
      */
-    private ?string $contactEmail;
+    private ?string $contactEmail = null;
 
     /**
      * @var string|null Contact phone number
      */
-    private ?string $contactPhoneNumber;
+    private ?string $contactPhoneNumber = null;
 
     /**
      * @var User|null Entity owner

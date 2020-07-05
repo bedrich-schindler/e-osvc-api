@@ -32,12 +32,12 @@ App\Entity\User:
 
     cidNumber:
       - NotBlank: ~
-      - Range:
-          min: 0
+      - GreaterThan:
+          value: 0
 
     taxNumber:
-      - Range:
-          min: 0
+      - GreaterThan:
+          value: 0
 
     bankAccount:
       - NotBlank: ~

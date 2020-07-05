@@ -7,7 +7,7 @@ class Project implements OwnedByUserInterface
     /**
      * @var integer|null Id
      */
-    private ?int $id;
+    private ?int $id = null;
 
     /**
      * @var string Name
@@ -17,7 +17,7 @@ class Project implements OwnedByUserInterface
     /**
      * @var Client|null
      */
-    private ?Client $client;
+    private ?Client $client = null;
 
     /**
      * @var User|null Entity owner
