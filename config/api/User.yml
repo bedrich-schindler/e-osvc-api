@@ -34,6 +34,10 @@ App\Entity\User:
       subresource:
         resourceClass: 'App\Entity\Client'
         collection: true
+    healthInsurances:
+      subresource:
+        resourceClass: 'App\Entity\HealthInsurance'
+        collection: true
     projects:
       subresource:
         resourceClass: 'App\Entity\Project'

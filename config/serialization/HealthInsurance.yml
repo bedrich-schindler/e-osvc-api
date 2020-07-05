@@ -1,0 +1,29 @@
+App\Entity\HealthInsurance:
+  attributes:
+    id:
+      groups:
+        - health_insurance_out_list
+        - health_insurance_out_detail
+    date:
+      groups:
+        - health_insurance_out_list
+        - health_insurance_out_detail
+        - health_insurance_in
+    amount:
+      groups:
+        - health_insurance_out_list
+        - health_insurance_out_detail
+        - health_insurance_in
+    variant:
+      groups:
+        - health_insurance_out_list
+        - health_insurance_out_detail
+        - health_insurance_in
+    note:
+      groups:
+        - health_insurance_out_list
+        - health_insurance_out_detail
+        - health_insurance_in
+    owner:
+      groups:
+        - health_insurance_out_detail

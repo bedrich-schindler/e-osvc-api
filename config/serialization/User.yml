@@ -3,6 +3,7 @@ App\Entity\User:
     id:
       groups:
         - client_out_detail
+        - health_insurance_out_detail
         - invoice_out_list
         - invoice_out_detail
         - project_out_detail

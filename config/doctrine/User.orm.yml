@@ -62,6 +62,10 @@ App\Entity\User:
       targetEntity: App\Entity\Client
       mappedBy: owner
 
+    healthInsurances:
+      targetEntity: App\Entity\HealthInsurance
+      mappedBy: owner
+
     projects:
       targetEntity: App\Entity\Project
       mappedBy: owner

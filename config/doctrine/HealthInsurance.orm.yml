@@ -1,0 +1,33 @@
+App\Entity\HealthInsurance:
+  type: entity
+  table: health_insurance
+
+  id:
+    id:
+      type: integer
+      generator: { strategy: IDENTITY }
+
+  fields:
+    date:
+      type: datetime_immutable
+
+    amount:
+      type: float
+
+    variant:
+      type: string
+
+    note:
+      type: string
+      length: 256
+      nullable: true
+
+
+  manyToOne:
+    owner:
+      targetEntity: App\Entity\User
+      inversedBy: healthInsurances
+      joinColumn:
+        name: owner_id
+        referencedColumnName: id
+        nullable: false
