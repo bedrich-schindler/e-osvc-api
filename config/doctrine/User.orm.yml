@@ -74,6 +74,10 @@ App\Entity\User:
       targetEntity: App\Entity\Invoice
       mappedBy: owner
 
+    sicknessInsurances:
+      targetEntity: App\Entity\SicknessInsurance
+      mappedBy: owner
+
     socialInsurances:
       targetEntity: App\Entity\SocialInsurance
       mappedBy: owner

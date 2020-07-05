@@ -46,6 +46,10 @@ App\Entity\User:
       subresource:
         resourceClass: 'App\Entity\Invoice'
         collection: true
+    sicknessInsurances:
+      subresource:
+        resourceClass: 'App\Entity\SicknessInsurance'
+        collection: true
     socialInsurances:
       subresource:
         resourceClass: 'App\Entity\SocialInsurance'

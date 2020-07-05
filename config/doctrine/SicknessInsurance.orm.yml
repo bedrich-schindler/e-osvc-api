@@ -1,0 +1,33 @@
+App\Entity\SicknessInsurance:
+  type: entity
+  table: sickness_insurance
+
+  id:
+    id:
+      type: integer
+      generator: { strategy: IDENTITY }
+
+  fields:
+    date:
+      type: datetime_immutable
+
+    amount:
+      type: float
+
+    variant:
+      type: string
+
+    note:
+      type: string
+      length: 256
+      nullable: true
+
+
+  manyToOne:
+    owner:
+      targetEntity: App\Entity\User
+      inversedBy: sicknessInsurances
+      joinColumn:
+        name: owner_id
+        referencedColumnName: id
+        nullable: false

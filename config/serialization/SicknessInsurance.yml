@@ -1,0 +1,29 @@
+App\Entity\SicknessInsurance:
+  attributes:
+    id:
+      groups:
+        - sickness_insurance_out_list
+        - sickness_insurance_out_detail
+    date:
+      groups:
+        - sickness_insurance_out_list
+        - sickness_insurance_out_detail
+        - sickness_insurance_in
+    amount:
+      groups:
+        - sickness_insurance_out_list
+        - sickness_insurance_out_detail
+        - sickness_insurance_in
+    variant:
+      groups:
+        - sickness_insurance_out_list
+        - sickness_insurance_out_detail
+        - sickness_insurance_in
+    note:
+      groups:
+        - sickness_insurance_out_list
+        - sickness_insurance_out_detail
+        - sickness_insurance_in
+    owner:
+      groups:
+        - sickness_insurance_out_detail

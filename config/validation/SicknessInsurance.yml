@@ -1,0 +1,19 @@
+App\Entity\SicknessInsurance:
+  properties:
+    date:
+      - NotBlank: ~
+
+    amount:
+      - NotBlank: ~
+
+    variant:
+      - NotBlank: ~
+      - Choice:
+          callback: [App\Entity\InsuranceVariant, getVariants]
+
+    note:
+      - Length:
+          max: 256
+
+    owner:
+      - NotBlank: ~

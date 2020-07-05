@@ -112,6 +112,11 @@ class User implements UserInterface
      */
     private Collection $healthInsurances;
 
+    /**
+     * @var Collection Sickness insurances
+     */
+    private Collection $sicknessInsurances;
+
     public function __construct()
     {
         $this->firstName = '';
@@ -132,6 +137,7 @@ class User implements UserInterface
         $this->invoices = new ArrayCollection();
         $this->socialInsurances = new ArrayCollection();
         $this->healthInsurances = new ArrayCollection();
+        $this->sicknessInsurances = new ArrayCollection();
     }
 
     /**
@@ -529,6 +535,25 @@ class User implements UserInterface
     public function setHealthInsurances(Collection $healthInsurances): User
     {
         $this->healthInsurances = $healthInsurances;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getSicknessInsurances(): Collection
+    {
+        return $this->sicknessInsurances;
+    }
+
+    /**
+     * @param Collection $sicknessInsurances
+     * @return User
+     */
+    public function setSicknessInsurances(Collection $sicknessInsurances): User
+    {
+        $this->sicknessInsurances = $sicknessInsurances;
 
         return $this;
     }
