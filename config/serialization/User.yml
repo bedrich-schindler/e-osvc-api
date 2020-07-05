@@ -6,6 +6,7 @@ App\Entity\User:
         - invoice_out_list
         - invoice_out_detail
         - project_out_detail
+        - social_insurance_out_detail
         - user_out_list
         - user_out_detail
     firstName:

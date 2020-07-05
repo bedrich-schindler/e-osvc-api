@@ -1,0 +1,37 @@
+App\Entity\SocialInsurance:
+  collectionOperations:
+    post:
+      method: POST
+      normalization_context:
+        groups:
+          - social_insurance_out_detail
+      denormalization_context:
+        groups:
+          - social_insurance_in
+      security_post_denormalize: "is_granted('ROLE_USER')"
+  itemOperations:
+    get:
+      method: GET
+      normalization_context:
+        groups:
+          - social_insurance_out_detail
+      security: "is_granted('ROLE_USER') and object.getOwner() == user"
+    put:
+      method: PUT
+      normalization_context:
+        groups:
+          - social_insurance_out_detail
+      denormalization_context:
+        groups:
+          - social_insurance_in
+      security: "is_granted('ROLE_USER') and object.getOwner() == user"
+    delete:
+      method: DELETE
+      security: "is_granted('ROLE_USER') and object.getOwner() == user"
+  subresourceOperations:
+    api_users_social_insurances_get_subresource:
+      method: GET
+      normalization_context:
+        groups:
+          - social_insurance_out_list
+      security: "is_granted('ROLE_USER')" # TODO: Fix security rule to check owner

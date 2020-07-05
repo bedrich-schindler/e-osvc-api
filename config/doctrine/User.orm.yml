@@ -69,3 +69,7 @@ App\Entity\User:
     invoices:
       targetEntity: App\Entity\Invoice
       mappedBy: owner
+
+    socialInsurances:
+      targetEntity: App\Entity\SocialInsurance
+      mappedBy: owner
