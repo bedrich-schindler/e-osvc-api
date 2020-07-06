@@ -1,0 +1,33 @@
+App\Entity\Tax:
+  type: entity
+  table: tax
+
+  id:
+    id:
+      type: integer
+      generator: { strategy: IDENTITY }
+
+  fields:
+    date:
+      type: datetime_immutable
+
+    amount:
+      type: float
+
+    variant:
+      type: string
+
+    note:
+      type: string
+      length: 256
+      nullable: true
+
+
+  manyToOne:
+    owner:
+      targetEntity: App\Entity\User
+      inversedBy: taxes
+      joinColumn:
+        name: owner_id
+        referencedColumnName: id
+        nullable: false

@@ -81,3 +81,7 @@ App\Entity\User:
     socialInsurances:
       targetEntity: App\Entity\SocialInsurance
       mappedBy: owner
+
+    taxes:
+      targetEntity: App\Entity\Tax
+      mappedBy: owner

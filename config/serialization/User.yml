@@ -9,6 +9,7 @@ App\Entity\User:
         - project_out_detail
         - sickness_insurance_out_detail
         - social_insurance_out_detail
+        - tax_out_detail
         - user_out_list
         - user_out_detail
     firstName:

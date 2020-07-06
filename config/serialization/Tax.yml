@@ -1,0 +1,29 @@
+App\Entity\Tax:
+  attributes:
+    id:
+      groups:
+        - tax_out_list
+        - tax_out_detail
+    date:
+      groups:
+        - tax_out_list
+        - tax_out_detail
+        - tax_in
+    amount:
+      groups:
+        - tax_out_list
+        - tax_out_detail
+        - tax_in
+    variant:
+      groups:
+        - tax_out_list
+        - tax_out_detail
+        - tax_in
+    note:
+      groups:
+        - tax_out_list
+        - tax_out_detail
+        - tax_in
+    owner:
+      groups:
+        - tax_out_detail
