@@ -1,42 +1,37 @@
-App\Entity\Project:
+App\Entity\TimeRecord:
   collectionOperations:
     post:
       method: POST
       normalization_context:
         groups:
-          - project_out_detail
+          - time_record_out_detail
       denormalization_context:
         groups:
-          - project_in
+          - time_record_in
       security_post_denormalize: "is_granted('ROLE_USER')"
   itemOperations:
     get:
       method: GET
       normalization_context:
         groups:
-          - project_out_detail
+          - time_record_out_detail
       security: "is_granted('ROLE_USER') and object.getOwner() == user"
     put:
       method: PUT
       normalization_context:
         groups:
-          - project_out_detail
+          - time_record_out_detail
       denormalization_context:
         groups:
-          - project_in
+          - time_record_in
       security: "is_granted('ROLE_USER') and object.getOwner() == user"
     delete:
       method: DELETE
       security: "is_granted('ROLE_USER') and object.getOwner() == user"
   subresourceOperations:
-    api_users_projects_get_subresource:
+    api_users_time_records_get_subresource:
       method: GET
       normalization_context:
         groups:
-          - project_out_list
+          - time_record_out_list
       security: "is_granted('ROLE_USER')" # TODO: Fix security rule to check owner
-  properties:
-    timeRecords:
-      subresource:
-        resourceClass: 'App\Entity\TimeRecord'
-        collection: true

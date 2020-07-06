@@ -1,0 +1,38 @@
+App\Entity\TimeRecord:
+  type: entity
+  table: time_record
+
+  id:
+    id:
+      type: integer
+      generator: { strategy: IDENTITY }
+
+  fields:
+    startDateTime:
+      type: datetime_immutable
+
+    endDateTime:
+      type: datetime_immutable
+
+    note:
+      type: string
+      length: 256
+      nullable: true
+
+  manyToOne:
+    project:
+      targetEntity: App\Entity\Project
+      inversedBy: timeRecords
+      joinColumn:
+        name: project_id
+        referencedColumnName: id
+        nullable: false
+        onDelete: CASCADE
+
+    owner:
+      targetEntity: App\Entity\User
+      inversedBy: timeRecords
+      joinColumn:
+        name: owner_id
+        referencedColumnName: id
+        nullable: false

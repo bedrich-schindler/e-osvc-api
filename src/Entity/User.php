@@ -122,6 +122,11 @@ class User implements UserInterface
      */
     private Collection $taxes;
 
+    /**
+     * @var Collection Time records
+     */
+    private Collection $timeRecords;
+
     public function __construct()
     {
         $this->firstName = '';
@@ -144,6 +149,7 @@ class User implements UserInterface
         $this->healthInsurances = new ArrayCollection();
         $this->sicknessInsurances = new ArrayCollection();
         $this->taxes = new ArrayCollection();
+        $this->timeRecords = new ArrayCollection();
     }
 
     /**
@@ -579,6 +585,25 @@ class User implements UserInterface
     public function setTaxes(Collection $taxes): User
     {
         $this->taxes = $taxes;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getTimeRecords(): Collection
+    {
+        return $this->timeRecords;
+    }
+
+    /**
+     * @param Collection $timeRecords
+     * @return User
+     */
+    public function setTimeRecords(Collection $timeRecords): User
+    {
+        $this->timeRecords = $timeRecords;
 
         return $this;
     }

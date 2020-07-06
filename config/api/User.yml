@@ -54,8 +54,11 @@ App\Entity\User:
       subresource:
         resourceClass: 'App\Entity\SocialInsurance'
         collection: true
-
     taxes:
       subresource:
         resourceClass: 'App\Entity\Tax'
+        collection: true
+    timeRecords:
+      subresource:
+        resourceClass: 'App\Entity\TimeRecord'
         collection: true

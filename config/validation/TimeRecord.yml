@@ -1,0 +1,17 @@
+App\Entity\TimeRecord:
+  properties:
+    startDateTime:
+      - NotBlank: ~
+
+    endDateTime:
+      - NotBlank: ~
+
+    note:
+      - Length:
+          max: 256
+
+    project:
+      - NotBlank: ~
+
+    owner:
+      - NotBlank: ~

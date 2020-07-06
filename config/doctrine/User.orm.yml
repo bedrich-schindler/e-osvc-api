@@ -85,3 +85,7 @@ App\Entity\User:
     taxes:
       targetEntity: App\Entity\Tax
       mappedBy: owner
+
+    timeRecords:
+      targetEntity: App\Entity\TimeRecord
+      mappedBy: owner
