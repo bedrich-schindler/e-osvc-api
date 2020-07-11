@@ -39,7 +39,7 @@ App\Entity\Invoice:
         - invoice_out_list
         - invoice_out_detail
         - invoice_in
-    projectInfo:
+    projectInfoItems:
       groups:
         - invoice_out_list
         - invoice_out_detail

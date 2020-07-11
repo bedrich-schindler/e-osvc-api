@@ -52,22 +52,17 @@ App\Entity\Invoice:
         - remove
       orphanRemoval: true
 
-    projectInfo:
-      targetEntity: App\Entity\InvoiceProjectInfo
-      inversedBy: invoice
-      joinColumn:
-        name: invoice_project_info_id
-        referencedColumnName: id
-        nullable: false
-        onDelete: CASCADE
+  oneToMany:
+    invoiceItems:
+      targetEntity: App\Entity\InvoiceItem
+      mappedBy: invoice
       cascade:
         - persist
         - remove
       orphanRemoval: true
 
-  oneToMany:
-    invoiceItems:
-      targetEntity: App\Entity\InvoiceItem
+    projectInfoItems:
+      targetEntity: App\Entity\InvoiceProjectInfo
       mappedBy: invoice
       cascade:
         - persist

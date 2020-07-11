@@ -54,16 +54,14 @@ class Invoice implements OwnedByUserInterface
     private ?InvoiceClientInfo $clientInfo = null;
 
     /**
-     * @var InvoiceProjectInfo|null Project info
+     * @var Collection Project infos
      */
-    private ?InvoiceProjectInfo $projectInfo = null;
+    private Collection $projectInfoItems;
 
     /**
      * @var User|null Entity owner
      */
     private ?User $owner = null;
-
-    // project + client
 
     public function __construct()
     {
@@ -72,6 +70,7 @@ class Invoice implements OwnedByUserInterface
         $this->invoiceDueDate = new DateTimeImmutable();
         $this->paymentVariableSymbol = 0;
         $this->invoiceItems = new ArrayCollection();
+        $this->projectInfoItems = new ArrayCollection();
     }
 
     /**
@@ -250,20 +249,24 @@ class Invoice implements OwnedByUserInterface
     }
 
     /**
-     * @return InvoiceProjectInfo|null
+     * @return InvoiceProjectInfo[]
      */
-    public function getProjectInfo(): ?InvoiceProjectInfo
+    public function getProjectInfoItems(): array
     {
-        return $this->projectInfo;
+        return $this->projectInfoItems->toArray();
     }
 
     /**
-     * @param InvoiceProjectInfo|null $projectInfo
+     * @param InvoiceProjectInfo[] $projectInfoItems
      * @return Invoice
      */
-    public function setProjectInfo(?InvoiceProjectInfo $projectInfo): Invoice
+    public function setProjectInfoItems(array $projectInfoItems): Invoice
     {
-        $this->projectInfo = $projectInfo;
+        foreach ($projectInfoItems as $projectInfoItem) {
+            $projectInfoItem->setInvoice($this);
+        }
+
+        $this->projectInfoItems = new ArrayCollection($projectInfoItems);
 
         return $this;
     }

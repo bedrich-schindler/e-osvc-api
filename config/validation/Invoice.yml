@@ -25,8 +25,10 @@ App\Entity\Invoice:
       - NotBlank: ~
       - Valid: ~
 
-    projectInfo:
+    projectInfoItems:
       - NotBlank: ~
+      - Count:
+          min: 1
       - Valid: ~
 
     invoiceItems:

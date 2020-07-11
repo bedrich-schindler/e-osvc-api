@@ -12,12 +12,16 @@ App\Entity\InvoiceProjectInfo:
       type: string
       length: 64
 
-  oneToOne:
+  manyToOne:
     invoice:
       targetEntity: App\Entity\Invoice
-      mappedBy: projectInfo
+      inversedBy: projectInfoItems
+      joinColumn:
+        name: invoice_id
+        referencedColumnName: id
+        nullable: false
+        onDelete: CASCADE
 
-  manyToOne:
     original:
       targetEntity: App\Entity\Project
       joinColumn:
