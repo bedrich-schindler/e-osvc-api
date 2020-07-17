@@ -59,6 +59,11 @@ class Invoice implements OwnedByUserInterface
     private Collection $projectInfoItems;
 
     /**
+     * @var Collection Time records
+     */
+    private Collection $timeRecords;
+
+    /**
      * @var User|null Entity owner
      */
     private ?User $owner = null;
@@ -71,6 +76,7 @@ class Invoice implements OwnedByUserInterface
         $this->paymentVariableSymbol = 0;
         $this->invoiceItems = new ArrayCollection();
         $this->projectInfoItems = new ArrayCollection();
+        $this->timeRecords = new ArrayCollection();
     }
 
     /**
@@ -267,6 +273,25 @@ class Invoice implements OwnedByUserInterface
         }
 
         $this->projectInfoItems = new ArrayCollection($projectInfoItems);
+
+        return $this;
+    }
+
+    /**
+     * @return Collection
+     */
+    public function getTimeRecords(): Collection
+    {
+        return $this->timeRecords;
+    }
+
+    /**
+     * @param Collection $timeRecords
+     * @return Invoice
+     */
+    public function setTimeRecords(Collection $timeRecords): Invoice
+    {
+        $this->timeRecords = $timeRecords;
 
         return $this;
     }

@@ -69,6 +69,10 @@ App\Entity\Invoice:
         - remove
       orphanRemoval: true
 
+    timeRecords:
+      targetEntity: App\Entity\TimeRecord
+      mappedBy: invoice
+
   manyToOne:
     owner:
       targetEntity: App\Entity\User

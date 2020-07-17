@@ -10,6 +10,7 @@ App\Entity\Project:
         - time_record_out_detail
     name:
       groups:
+        - invoice_out_detail
         - project_out_list
         - project_out_detail
         - project_in

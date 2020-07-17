@@ -1,5 +1,14 @@
 App\Entity\TimeRecord:
   collectionOperations:
+    get:
+      method: GET
+      normalization_context:
+        groups:
+          - time_record_out_list
+      security_post_denormalize: "is_granted('ROLE_USER')"
+      filters:
+        - 'time_records.search_filter'
+        - 'time_records.in_or_null_filter'
     post:
       method: POST
       normalization_context:

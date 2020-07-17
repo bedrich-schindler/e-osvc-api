@@ -32,6 +32,11 @@ class TimeRecord implements OwnedByUserInterface
     private Project $project;
 
     /**
+     * @var Invoice|null Invoice
+     */
+    private ?Invoice $invoice = null;
+
+    /**
      * @var User|null Entity owner
      */
     private ?User $owner = null;
@@ -133,6 +138,25 @@ class TimeRecord implements OwnedByUserInterface
     public function setProject(Project $project): TimeRecord
     {
         $this->project = $project;
+
+        return $this;
+    }
+
+    /**
+     * @return Invoice|null
+     */
+    public function getInvoice(): ?Invoice
+    {
+        return $this->invoice;
+    }
+
+    /**
+     * @param Invoice|null $invoice
+     * @return TimeRecord
+     */
+    public function setInvoice(?Invoice $invoice): TimeRecord
+    {
+        $this->invoice = $invoice;
 
         return $this;
     }

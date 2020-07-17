@@ -49,6 +49,9 @@ App\Entity\Invoice:
         - invoice_out_list
         - invoice_out_detail
         - invoice_in
+    timeRecords:
+      groups:
+        - invoice_out_detail
     owner:
       groups:
         - invoice_out_detail

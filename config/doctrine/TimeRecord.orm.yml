@@ -20,6 +20,14 @@ App\Entity\TimeRecord:
       nullable: true
 
   manyToOne:
+    invoice:
+      targetEntity: App\Entity\Invoice
+      inversedBy: timeRecords
+      joinColumn:
+        name: invoice_id
+        referencedColumnName: id
+        nullable: true
+        onDelete: SET NULL
     project:
       targetEntity: App\Entity\Project
       inversedBy: timeRecords
