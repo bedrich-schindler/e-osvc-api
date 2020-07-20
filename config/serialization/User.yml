@@ -73,3 +73,6 @@ App\Entity\User:
     token:
       groups:
         - auth_detail_out
+    userNotifications:
+      groups:
+        - user_out_detail

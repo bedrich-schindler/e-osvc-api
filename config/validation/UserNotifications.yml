@@ -1,0 +1,40 @@
+App\Entity\UserNotifications:
+  properties:
+    healthInsuranceEnabled:
+      - NotNull: ~
+
+    healthInsuranceDayOfMonth:
+      - NotBlank: ~
+      - Range:
+          min: 1
+          max: 31
+
+    sicknessInsuranceEnabled:
+      - NotNull: ~
+
+    sicknessInsuranceDayOfMonth:
+      - NotBlank: ~
+      - Range:
+          min: 1
+          max: 31
+
+    socialInsuranceEnabled:
+      - NotNull: ~
+
+    socialInsuranceDayOfMonth:
+      - NotBlank: ~
+      - Range:
+          min: 1
+          max: 31
+
+    taxEnabled:
+      - NotNull: ~
+
+    taxDayOfMonth:
+      - NotBlank: ~
+      - Range:
+          min: 1
+          max: 31
+
+    overdueInvoiceEnabled:
+      - NotNull: ~

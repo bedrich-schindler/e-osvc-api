@@ -57,6 +57,11 @@ App\Entity\User:
     roles:
       type: json
 
+  oneToOne:
+    userNotifications:
+      targetEntity: App\Entity\UserNotifications
+      mappedBy: user
+
   oneToMany:
     clients:
       targetEntity: App\Entity\Client

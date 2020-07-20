@@ -1,0 +1,18 @@
+App\Entity\UserNotifications:
+  collectionOperations: []
+  itemOperations:
+    get:
+      method: GET
+      normalization_context:
+        groups:
+          - user_notifications_out_detail
+      security: "is_granted('ROLE_USER') and object.getUser() == user"
+    put:
+      method: PUT
+      normalization_context:
+        groups:
+          - user_notifications_out_detail
+      denormalization_context:
+        groups:
+          - user_notifications_in
+      security: "is_granted('ROLE_USER') and object.getUser() == user"

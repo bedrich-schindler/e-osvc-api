@@ -127,6 +127,11 @@ class User implements UserInterface
      */
     private Collection $timeRecords;
 
+    /**
+     * @var UserNotifications|null User notifications
+     */
+    private ?UserNotifications $userNotifications = null;
+
     public function __construct()
     {
         $this->firstName = '';
@@ -604,6 +609,25 @@ class User implements UserInterface
     public function setTimeRecords(Collection $timeRecords): User
     {
         $this->timeRecords = $timeRecords;
+
+        return $this;
+    }
+
+    /**
+     * @return UserNotifications
+     */
+    public function getUserNotifications(): ?UserNotifications
+    {
+        return $this->userNotifications;
+    }
+
+    /**
+     * @param UserNotifications|null $userNotifications
+     * @return User
+     */
+    public function setUserNotifications(?UserNotifications $userNotifications): User
+    {
+        $this->userNotifications = $userNotifications;
 
         return $this;
     }

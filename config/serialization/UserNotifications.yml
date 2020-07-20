@@ -1,0 +1,62 @@
+App\Entity\UserNotifications:
+  attributes:
+    id:
+      groups:
+        - user_in
+        - user_out_detail
+        - user_notifications_in
+        - user_notifications_out_detail
+    healthInsuranceEnabled:
+      groups:
+        - user_in
+        - user_out_detail
+        - user_notifications_in
+        - user_notifications_out_detail
+    healthInsuranceDayOfMonth:
+      groups:
+        - user_in
+        - user_out_detail
+        - user_notifications_in
+        - user_notifications_out_detail
+    sicknessInsuranceEnabled:
+      groups:
+        - user_in
+        - user_out_detail
+        - user_notifications_in
+        - user_notifications_out_detail
+    sicknessInsuranceDayOfMonth:
+      groups:
+        - user_in
+        - user_out_detail
+        - user_notifications_in
+        - user_notifications_out_detail
+    socialInsuranceEnabled:
+      groups:
+        - user_in
+        - user_out_detail
+        - user_notifications_in
+        - user_notifications_out_detail
+    socialInsuranceDayOfMonth:
+      groups:
+        - user_in
+        - user_out_detail
+        - user_notifications_in
+        - user_notifications_out_detail
+    taxEnabled:
+      groups:
+        - user_in
+        - user_out_detail
+        - user_notifications_in
+        - user_notifications_out_detail
+    taxDayOfMonth:
+      groups:
+        - user_in
+        - user_out_detail
+        - user_notifications_in
+        - user_notifications_out_detail
+    overdueInvoiceEnabled:
+      groups:
+        - user_in
+        - user_out_detail
+        - user_notifications_in
+        - user_notifications_out_detail

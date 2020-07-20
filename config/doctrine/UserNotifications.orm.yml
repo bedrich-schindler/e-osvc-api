@@ -1,0 +1,50 @@
+App\Entity\UserNotifications:
+  type: entity
+  table: app_user_notifications
+
+  id:
+    id:
+      type: integer
+      generator: { strategy: IDENTITY }
+
+  fields:
+    healthInsuranceEnabled:
+      type: boolean
+
+    healthInsuranceDayOfMonth:
+      type: integer
+
+    sicknessInsuranceEnabled:
+      type: boolean
+
+    sicknessInsuranceDayOfMonth:
+      type: integer
+
+    socialInsuranceEnabled:
+      type: boolean
+
+    socialInsuranceDayOfMonth:
+      type: integer
+
+    taxEnabled:
+      type: boolean
+
+    taxDayOfMonth:
+      type: integer
+
+    overdueInvoiceEnabled:
+      type: boolean
+
+  oneToOne:
+    user:
+      targetEntity: App\Entity\User
+      inversedBy: userNotifications
+      joinColumn:
+        name: user_id
+        referencedColumnName: id
+        nullable: false
+        onDelete: CASCADE
+      cascade:
+        - persist
+        - remove
+      orphanRemoval: true
