@@ -5,3 +5,11 @@
 authentication_token:
   path: /auth
   methods: [POST]
+
+statistics_get_user_statistics:
+  path: /users/{id}/statistics
+  methods: [GET]
+  defaults:
+    _controller: App\Controller\StatisticsController::getUserStatistics
+    _api_resource_class: App\Entity\User
+    _api_item_operation_name: getUserStatistics

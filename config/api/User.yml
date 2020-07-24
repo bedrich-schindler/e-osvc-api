@@ -29,6 +29,11 @@ App\Entity\User:
           - user_in
     delete:
       method: DELETE
+    getUserStatistics:
+      method: GET
+      route_name: statistics_get_user_statistics
+      swagger_context:
+        summary: Gets statistics of the User
   properties:
     clients:
       subresource:
