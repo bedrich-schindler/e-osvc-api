@@ -1,4 +1,7 @@
 App\Entity\SicknessInsurance:
+  attributes:
+    order:
+      date: DESC
   collectionOperations:
     post:
       method: POST

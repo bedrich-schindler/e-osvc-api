@@ -1,4 +1,7 @@
 App\Entity\SocialInsurance:
+  attributes:
+    order:
+      date: DESC
   collectionOperations:
     post:
       method: POST

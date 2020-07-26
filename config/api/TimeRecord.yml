@@ -1,4 +1,7 @@
 App\Entity\TimeRecord:
+  attributes:
+    order:
+      startDateTime: DESC
   collectionOperations:
     get:
       method: GET

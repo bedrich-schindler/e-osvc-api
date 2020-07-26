@@ -1,4 +1,7 @@
 App\Entity\Invoice:
+  attributes:
+    order:
+      invoiceDate: DESC
   collectionOperations:
     get:
       method: GET

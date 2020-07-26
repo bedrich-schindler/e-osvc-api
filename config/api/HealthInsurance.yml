@@ -1,4 +1,7 @@
 App\Entity\HealthInsurance:
+  attributes:
+    order:
+      date: DESC
   collectionOperations:
     post:
       method: POST

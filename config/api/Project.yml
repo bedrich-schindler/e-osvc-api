@@ -1,4 +1,7 @@
 App\Entity\Project:
+  attributes:
+    order:
+      name: ASC
   collectionOperations:
     post:
       method: POST

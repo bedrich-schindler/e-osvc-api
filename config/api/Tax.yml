@@ -1,4 +1,7 @@
 App\Entity\Tax:
+  attributes:
+    order:
+      date: DESC
   collectionOperations:
     post:
       method: POST
