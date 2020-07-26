@@ -1,5 +1,14 @@
 App\Entity\Invoice:
   collectionOperations:
+    get:
+      method: GET
+      normalization_context:
+        groups:
+          - invoice_out_list
+      security_post_denormalize: "is_granted('ROLE_USER')"
+      filters:
+        - 'invoices.date_filter'
+        - 'invoices.search_filter'
     post:
       method: POST
       normalization_context:

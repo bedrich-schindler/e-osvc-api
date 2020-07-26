@@ -50,6 +50,27 @@ services:
 
     # API filters
 
+    invoices.date_filter:
+      parent: 'api_platform.doctrine.orm.date_filter'
+      arguments:
+        - invoiceDate: ~
+      tags:
+        - 'api_platform.filter'
+      autowire: false
+      autoconfigure: false
+      public: false
+
+    invoices.search_filter:
+      parent: 'api_platform.doctrine.orm.search_filter'
+      arguments:
+        - 'clientInfo.original.id': exact
+          'owner.id': exact
+      tags:
+        - 'api_platform.filter'
+      autowire: false
+      autoconfigure: false
+      public: false
+
     time_records.in_or_null_filter:
       class: App\Filter\InOrNullFilter
       arguments: [ '@doctrine', ~, '@?logger', {} ]
