@@ -56,6 +56,17 @@ services:
       tags:
         - 'api_platform.filter'
 
+    time_records.date_filter:
+      parent: 'api_platform.doctrine.orm.date_filter'
+      arguments:
+        - startDateTime: ~
+          endDateTime: ~
+      tags:
+        - 'api_platform.filter'
+      autowire: false
+      autoconfigure: false
+      public: false
+
     time_records.search_filter:
       parent: 'api_platform.doctrine.orm.search_filter'
       arguments:

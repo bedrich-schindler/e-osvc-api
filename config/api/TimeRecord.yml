@@ -7,6 +7,7 @@ App\Entity\TimeRecord:
           - time_record_out_list
       security_post_denormalize: "is_granted('ROLE_USER')"
       filters:
+        - 'time_records.date_filter'
         - 'time_records.search_filter'
         - 'time_records.in_or_null_filter'
     post:
