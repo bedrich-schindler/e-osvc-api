@@ -37,13 +37,6 @@ services:
 
     # Event subscribers
 
-    App\Subscriber\UserPasswordSubscriber:
-        class: App\Subscriber\UserPasswordSubscriber
-        autowire: true
-        tags:
-            - { name: doctrine.event_subscriber }
-
-
     App\Subscriber\SetOwnerSubscriber:
       class: App\Subscriber\SetOwnerSubscriber
       autowire: true
