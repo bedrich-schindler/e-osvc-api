@@ -48,9 +48,9 @@ class User implements UserInterface
     private int $cidNumber;
 
     /**
-     * @var int|null Tax identification number
+     * @var string|null Tax identification number
      */
-    private ?int $taxNumber = null;
+    private ?string $taxNumber = null;
 
     /**
      * @var string Bank account
@@ -291,18 +291,18 @@ class User implements UserInterface
     }
 
     /**
-     * @return int|null
+     * @return string|null
      */
-    public function getTaxNumber(): ?int
+    public function getTaxNumber(): ?string
     {
         return $this->taxNumber;
     }
 
     /**
-     * @param int|null $taxNumber
+     * @param string|null $taxNumber
      * @return User
      */
-    public function setTaxNumber(?int $taxNumber): User
+    public function setTaxNumber(?string $taxNumber): User
     {
         $this->taxNumber = $taxNumber;
 

@@ -3,12 +3,12 @@ App\Entity\InvoiceUserInfo:
     firstName:
       - NotBlank: ~
       - Length:
-          max: 32
+          max: 64
 
     lastName:
       - NotBlank: ~
       - Length:
-          max: 32
+          max: 64
 
     street:
       - NotBlank: ~
@@ -32,8 +32,8 @@ App\Entity\InvoiceUserInfo:
           value: 0
 
     taxNumber:
-      - GreaterThan:
-          value: 0
+      - Length:
+          max: 32
 
     bankAccount:
       - NotBlank: ~

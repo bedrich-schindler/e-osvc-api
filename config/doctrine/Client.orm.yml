@@ -28,7 +28,8 @@ App\Entity\Client:
       nullable: true
 
     taxNumber:
-      type: integer
+      type: string
+      length: 32
       nullable: true
 
     contactEmail:

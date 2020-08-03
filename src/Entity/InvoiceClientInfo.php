@@ -35,9 +35,9 @@ class InvoiceClientInfo
     private ?int $cidNumber = null;
 
     /**
-     * @var int|null Tax identification number
+     * @var string|null Tax identification number
      */
-    private ?int $taxNumber = null;
+    private ?string $taxNumber = null;
 
     /**
      * @var Invoice|null Invoice
@@ -172,18 +172,18 @@ class InvoiceClientInfo
     }
 
     /**
-     * @return int|null
+     * @return string|null
      */
-    public function getTaxNumber(): ?int
+    public function getTaxNumber(): ?string
     {
         return $this->taxNumber;
     }
 
     /**
-     * @param int|null $taxNumber
+     * @param string|null $taxNumber
      * @return InvoiceClientInfo
      */
-    public function setTaxNumber(?int $taxNumber): InvoiceClientInfo
+    public function setTaxNumber(?string $taxNumber): InvoiceClientInfo
     {
         $this->taxNumber = $taxNumber;
 

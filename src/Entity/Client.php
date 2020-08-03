@@ -38,9 +38,9 @@ class Client implements OwnedByUserInterface
     private ?int $cidNumber = null;
 
     /**
-     * @var int|null Tax identification number
+     * @var string|null Tax identification number
      */
-    private ?int $taxNumber = null;
+    private ?string $taxNumber = null;
 
     /**
      * @var string|null Contact e-mail
@@ -186,18 +186,18 @@ class Client implements OwnedByUserInterface
     }
 
     /**
-     * @return int|null
+     * @return string|null
      */
-    public function getTaxNumber(): ?int
+    public function getTaxNumber(): ?string
     {
         return $this->taxNumber;
     }
 
     /**
-     * @param int|null $taxNumber
+     * @param string|null $taxNumber
      * @return Client
      */
-    public function setTaxNumber(?int $taxNumber): Client
+    public function setTaxNumber(?string $taxNumber): Client
     {
         $this->taxNumber = $taxNumber;
 

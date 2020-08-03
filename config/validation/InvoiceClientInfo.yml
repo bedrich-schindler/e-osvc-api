@@ -26,8 +26,8 @@ App\Entity\InvoiceClientInfo:
           value: 0
 
     taxNumber:
-      - GreaterThan:
-          value: 0
+      - Length:
+          max: 32
 
     original:
       - NotBlank: ~

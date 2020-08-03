@@ -31,7 +31,8 @@ App\Entity\InvoiceUserInfo:
       type: integer
 
     taxNumber:
-      type: integer
+      type: string
+      length: 32
       nullable: true
 
     bankAccount:

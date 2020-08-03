@@ -36,8 +36,8 @@ App\Entity\User:
           value: 0
 
     taxNumber:
-      - GreaterThan:
-          value: 0
+      - Length:
+          max: 32
 
     bankAccount:
       - NotBlank: ~
