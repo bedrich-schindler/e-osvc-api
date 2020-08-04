@@ -37,4 +37,3 @@ App\Entity\Tax:
       normalization_context:
         groups:
           - tax_out_list
-      security: "is_granted('ROLE_USER')" # TODO: Fix security rule to check owner

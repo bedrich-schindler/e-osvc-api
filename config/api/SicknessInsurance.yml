@@ -37,4 +37,3 @@ App\Entity\SicknessInsurance:
       normalization_context:
         groups:
           - sickness_insurance_out_list
-      security: "is_granted('ROLE_USER')" # TODO: Fix security rule to check owner

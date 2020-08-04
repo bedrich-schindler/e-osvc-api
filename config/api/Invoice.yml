@@ -46,4 +46,3 @@ App\Entity\Invoice:
       normalization_context:
         groups:
           - invoice_out_list
-      security: "is_granted('ROLE_USER')" # TODO: Fix security rule to check owner

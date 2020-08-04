@@ -47,4 +47,3 @@ App\Entity\TimeRecord:
       normalization_context:
         groups:
           - time_record_out_list
-      security: "is_granted('ROLE_USER')" # TODO: Fix security rule to check owner

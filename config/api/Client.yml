@@ -37,4 +37,3 @@ App\Entity\Client:
       normalization_context:
         groups:
           - client_out_list
-      security: "is_granted('ROLE_USER')" # TODO: Fix security rule to check owner

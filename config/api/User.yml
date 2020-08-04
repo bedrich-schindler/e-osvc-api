@@ -1,10 +1,5 @@
 App\Entity\User:
   collectionOperations:
-    get:
-      method: GET
-      normalization_context:
-        groups:
-          - user_out_list
     post:
       method: POST
       normalization_context:
@@ -19,6 +14,7 @@ App\Entity\User:
       normalization_context:
         groups:
           - user_out_detail
+      security: "is_granted('ROLE_USER') and object.getId() == user.getId()"
     put:
       method: PUT
       normalization_context:
@@ -27,8 +23,10 @@ App\Entity\User:
       denormalization_context:
         groups:
           - user_in
+      security: "is_granted('ROLE_USER') and object.getId() == user.getId()"
     delete:
       method: DELETE
+      security: "is_granted('ROLE_USER') and object.getId() == user.getId()"
     getUserStatistics:
       method: GET
       route_name: statistics_get_user_statistics

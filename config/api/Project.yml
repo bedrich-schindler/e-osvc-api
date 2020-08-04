@@ -37,9 +37,4 @@ App\Entity\Project:
       normalization_context:
         groups:
           - project_out_list
-      security: "is_granted('ROLE_USER')" # TODO: Fix security rule to check owner
-  properties:
-    timeRecords:
-      subresource:
-        resourceClass: 'App\Entity\TimeRecord'
-        collection: true
+      security: "is_granted('ROLE_USER')"

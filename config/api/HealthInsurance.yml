@@ -37,4 +37,3 @@ App\Entity\HealthInsurance:
       normalization_context:
         groups:
           - health_insurance_out_list
-      security: "is_granted('ROLE_USER')" # TODO: Fix security rule to check owner
